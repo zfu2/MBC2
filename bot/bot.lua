@@ -1,7 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 275357404 -- Put Here Your Bot ID
+our_id = 237696036 -- Put Here Your Bot ID
 --حط ايدي بوتك
 URL = require "socket.url"
 http = require "socket.http"
@@ -84,21 +84,16 @@ function create_config( )
     "plugins",
     "tools"
  },
-    sudo_users = {157059515},
+    sudo_users = {226861861},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[🔹مطورين البوت🔹      
-           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
-           💯DeV : @AhMaD_X7
-           💯DeV : @dev_iraq1
-           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹  
-  🔸بوت تواصل للمحضورين🔸
-           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
-           💯DeV : @tawasla7mad_bot
-           💯DeV : @jokr1996_bot
-           🔹◐◐◐◐◐◐✹◑◑◑◑◑◑🔹
-                 B❂T x7
+    info_text = [[💡Welcome To TEAMBOSS 
+For More Information Subscribe To The Channel @llDEV1ll 
+https://github.com/moody2020/TEAMBOSS
+💡Dev @TH3BOSS
+💡 Dev Bot @ll60Kllbot
+💡 channel @llDEV1ll
 ]],
   }
   serialize_to_file(config, './data/config.lua')
