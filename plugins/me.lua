@@ -23,17 +23,17 @@ local function run(msg, matches)
 				end
 				local rank
 				if is_sudo(msg) then
-					rank = 'Sudo👷'
+					rank = 'You Are My Sudo ❤️'
 				elseif is_owner(msg) then
-					rank = 'Bot Owner👳'
+					rank = 'You Are Bot Owner 💛'
 				elseif is_admin(msg) then
-					rank = 'Admin👮'
+					rank = 'You Are Admin 💚'
 				elseif is_mod(msg) then
-					rank = 'Moderator💂'
+					rank = 'You Ard Moderator 💙'
 				else
-					rank = 'Group Member👲'
+					rank = 'You Are Group Member 💜'
 				end
-				local text = '<b>اهلا وسهلا عزيزي هذه 🌝معلوماتك :</b>\n..\n<b>الاسم الاول🎀 :</b> <i>'..data.first_name_..'</i>\n..\n<b>الاسم الثاني🎏 :</b> <i>'..lastName..'</i>\n..\n<b>المعرف💬:</b> '..username..'\n..\n<b>الايدي📌 :</b> [ <code>'..data.id_..'</code> ]\n..\n<b> ايدي الكروب📄 :</b> [ <code>'..arg.chat_id..'</code> ]\n..\n<b>رقم هاتفك📱 :</b> [ <code>'..telNum..'</code> ]\n..\n<b>موقعك📍 :</b> <i>'..rank..'</i>\n..\n<i>BY JOZEF&JOKER🃏</i>'
+				local text = '<b>اهـلا بـك ❤️ معلوماتك :</b>\n..\n<b>الاسم الاول💡 :</b> <i>'..data.first_name_..'</i>\n..\n<b>الاسم الثاني💡 :</b> <i>'..lastName..'</i>\n..\n<b>المعرف💡:</b> '..username..'\n..\n<b>الايدي📌 :</b> [ <code>'..data.id_..'</code> ]\n..\n<b> ايدي الكروب💡 :</b> [ <code>'..arg.chat_id..'</code> ]\n..\n<b>رقم هاتفك💡 :</b> [ <code>'..telNum..'</code> ]\n..\n<b>موقعك💡 :</b> <i>'..rank..'</i>\n..\n<i>💡 مـطـور الـسـورس : الـزعـيـم < @RH3BOSS</i>'
 				tdcli.sendMessage(arg.chat_id, msg.id_, 1, text, 1, 'html')
 			end
 		end
