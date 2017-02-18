@@ -20,7 +20,7 @@ if is_banned(data.id_, arg.chat_id) then
    if not lang then
 		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_User_ "..user_name.." *[ "..data.id_.." ]* _is banned_", 0, "md")
    else
-		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_المستخدم_ "..user_name.." *[ "..data.id_.." ]* _تم حظره من المجموعة_", 0, "md")
+		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_العضوو_ "..user_name.." *[ "..data.id_.." ]* _تم حظره ☑️_", 0, "md")
 end
 kick_user(data.id_, arg.chat_id)
 end
@@ -28,7 +28,7 @@ if is_gbanned(data.id_) then
      if not lang then
 		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_User_ "..user_name.." *[ "..data.id_.." ]* _is globally banned_", 0, "md")
     else
-		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_المستخدم_ "..user_name.." *[ "..data.id_.." ]* _تم حظره من حميع مجموعات البوت_", 0, "md")
+		tdcli.sendMessage(arg.chat_id, arg.msg_id, 0, "_العضو_ "..user_name.." *[ "..data.id_.." ]* _تم حظره عام ☑️_", 0, "md")
    end
 kick_user(data.id_, arg.chat_id)
      end
@@ -77,14 +77,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't ban_ *mods,owners and bot admins*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك حظر المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
          end
      end
 if administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل تم حظره من المجموعة*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره ☑️*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
@@ -93,7 +93,7 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *banned*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *قد تم حظره من المجموعة*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره عام ☑️*", 0, "md")
    end
 end
 tdcli_function ({
@@ -115,7 +115,7 @@ if not administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *banned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *غير محظور بالفعل*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره ☑️*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = nil
@@ -123,7 +123,7 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *unbanned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم الغاء الحظر عنه*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره ☑️*", 0, "md")
    end
 end
 tdcli_function ({
@@ -131,7 +131,7 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, unban_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-  if cmd == "اكتم" then
+  if cmd == "كتم" then
 local function silent_cb(arg, data)
 local hash = "gp_lang:"..arg.chat_id
 local lang = redis:get(hash)
@@ -145,14 +145,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't silent_ *mods,owners and bot admins*", 0, "md")
     else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك اسكات المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع كتم المدراء او الادمنيه*", 0, "md")
        end
      end
 if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *silent*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم اسكاته بالفعل*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد كتمه 🔕*", 0, "md")
      end
    end
 administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = user_name
@@ -160,7 +160,7 @@ administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = u
   if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _added to_ *silent users list*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تمت اضافته الى قائمة الاسكات*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم كتمه 🔕*", 0, "md")
    end
 end
 tdcli_function ({
@@ -168,7 +168,7 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, silent_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-  if cmd == "فتح الكتم" then
+  if cmd == "الغاء الكتم" then
 local function unsilent_cb(arg, data)
 local hash = "gp_lang:"..arg.chat_id
 local lang = redis:get(hash)
@@ -182,7 +182,7 @@ if not administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *silent*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *غير مسكت بالفعل*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد الغاء الكتم عنه 🔕*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = nil
@@ -190,7 +190,7 @@ administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = n
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _removed from_ *silent users list*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم ازالته من قائمة الاسكات*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم الغاء الكتم عنه 🔕*", 0, "md")
    end
 end
 tdcli_function ({
@@ -216,14 +216,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't_ *globally ban* _other admins_", 0, "md")
   else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك حظر الادمنية من مجموعات البوت*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
         end
      end
 if is_gbanned(data.id_) then
    if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *globally banned*", 0, "md")
     else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل محظور من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره عام ☑️*", 0, "md")
       end
    end
   administration['gban_users'][tostring(data.id_)] = user_name
@@ -232,7 +232,7 @@ if is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *globally banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم حظره من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره عام ☑️*", 0, "md")
    end
 end
 tdcli_function ({
@@ -240,7 +240,7 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, gban_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-  if cmd == "فتح عام" then
+  if cmd == "الغاء العام" then
 local function ungban_cb(arg, data)
 local hash = "gp_lang:"..arg.chat_id
 local lang = redis:get(hash)
@@ -258,7 +258,7 @@ if not is_gbanned(data.id_) then
    if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *globally banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل غير محظور من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره العام ☑️*", 0, "md")
       end
    end
   administration['gban_users'][tostring(data.id_)] = nil
@@ -266,7 +266,7 @@ if not is_gbanned(data.id_) then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *globally unbanned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم الغاء حظره من جميع مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره العام ☑️*", 0, "md")
    end
 end
 tdcli_function ({
@@ -274,36 +274,36 @@ tdcli_function ({
     user_id_ = data.sender_user_id_
   }, ungban_cb, {chat_id=data.chat_id_,user_id=data.sender_user_id_})
   end
-  if cmd == "اطرد" then
+  if cmd == "دي" then
    if is_mod1(data.chat_id_, data.sender_user_id_) then
    if not lang then
   return tdcli.sendMessage(data.chat_id_, "", 0, "_You can't kick_ *mods,owners and bot admins*", 0, "md")
     elseif lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "*لا يمكنك طرد المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
    end
   else
      kick_user(data.sender_user_id_, data.chat_id_)
      end
   end
-  if cmd == "امسح الكل" then
+  if cmd == "مسح الكل" then
    if is_mod1(data.chat_id_, data.sender_user_id_) then
    if not lang then
   return tdcli.sendMessage(data.chat_id_, "", 0, "_You can't delete messages_ *mods,owners and bot admins*", 0, "md")
    elseif lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "*لا يمكنك حذف جميع رسائل المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حذف رسائل المدراء او الادمنيه*", 0, "md")
    end
   else
 tdcli.deleteMessagesFromUser(data.chat_id_, data.sender_user_id_, dl_cb, nil)
    if not lang then
   return tdcli.sendMessage(data.chat_id_, "", 0, "_All_ *messages* _of_ *[ "..data.sender_user_id_.." ]* _has been_ *deleted*", 0, "md")
       elseif lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "*رسائل المستخدم* *[ "..data.sender_user_id_.." ]* *تم حذفها*", 0, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "*رسائل العضو* *[ "..data.sender_user_id_.." ]* *تم حذفها 🗑*", 0, "md")
        end
     end
   end
 else
     if lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "_لم يتم العثور على المستخدم_", 0, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "_لم يتم العثور على العضو_", 0, "md")
    else
   return tdcli.sendMessage(data.chat_id_, "", 0, "*User Not Found*", 0, "md")
       end
@@ -326,14 +326,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't ban_ *mods,owners and bot admins*", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك حظر المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
          end
      end
 if administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل قد تم حظره*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره ☑️*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
@@ -342,7 +342,7 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = user_name
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *banned*", 0, "md")
     else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *قد تم حظره*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره ☑️*", 0, "md")
    end
 end
    if cmd == "الغاء الحظر" then
@@ -350,7 +350,7 @@ if not administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
     if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *banned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *غير محظور*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره ☑️*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = nil
@@ -358,22 +358,22 @@ administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *unbanned*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم الغاء الحظر عنه*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره ☑️*", 0, "md")
    end
 end
-  if cmd == "اكتم" then
+  if cmd == "كتم" then
    if is_mod1(arg.chat_id, data.id_) then
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't silent_ *mods,owners and bot admins*", 0, "md")
     else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك اسكات المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع كتم المدراء او الادمنيه*", 0, "md")
        end
      end
 if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *silent*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل تم اسكاته*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد كتمه 🔕*", 0, "md")
      end
    end
 administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = user_name
@@ -381,15 +381,15 @@ administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = u
   if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _added to_ *silent users list*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تمت اضافته الى قائمة الاسكات*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم كتمه 🔕*", 0, "md")
    end
 end
-  if cmd == "فتح الكتم" then
+  if cmd == "الغاء الكتم" then
 if not administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *silent*", 0, "md")
    else
-    return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *غير مسكت بالفعل*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد الغاء الكتم عنه 🔕*", 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = nil
@@ -397,7 +397,7 @@ administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = n
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _removed from_ *silent users list*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تمت ازالته من قائمة الاسكات*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم الغاء الكتم عنه 🔕*", 0, "md")
    end
 end
   if cmd == "حظر عام" then
@@ -409,14 +409,14 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't_ *globally ban* _other admins_", 0, "md")
   else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك حظر المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
         end
      end
 if is_gbanned(data.id_) then
    if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is already_ *globally banned*", 0, "md")
     else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *بالفعل تم حظره من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره عام ☑️*", 0, "md")
       end
    end
   administration['gban_users'][tostring(data.id_)] = user_name
@@ -425,10 +425,10 @@ if is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *globally banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم حظره من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره عام ☑️*", 0, "md")
    end
 end
-  if cmd == "فتح عام" then
+  if cmd == "الغاء العام" then
   if not administration['gban_users'] then
     administration['gban_users'] = {}
     save_data(_config.moderation.data, administration)
@@ -437,7 +437,7 @@ if not is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _is not_ *globally banned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *غير محظور من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره العام ☑️*", 0, "md")
       end
    end
   administration['gban_users'][tostring(data.id_)] = nil
@@ -445,39 +445,39 @@ if not is_gbanned(data.id_) then
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _has been_ *globally unbanned*", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_المستخدم_ "..user_name.." *"..data.id_.."* *تم الغاء الحظر عنه من مجموعات البوت*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره العام ☑️*", 0, "md")
    end
 end
-  if cmd == "اطرد" then
+  if cmd == "دي" then
    if is_mod1(arg.chat_id, data.id_) then
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't kick_ *mods,owners and bot admins*", 0, "md")
     elseif lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك طرد المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع طرد المدراء او الادمنيه*", 0, "md")
    end
   else
      kick_user(data.id_, arg.chat_id)
      end
   end
-  if cmd == "امسح الكل" then
+  if cmd == "مسح الكل" then
    if is_mod1(arg.chat_id, data.id_) then
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_You can't delete messages_ *mods,owners and bot admins*", 0, "md")
    elseif lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*لا يمكنك حذف رسائل المشرفين والادمنية*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حذف رسائل المدراء او الادمنيه*", 0, "md")
    end
   else
 tdcli.deleteMessagesFromUser(arg.chat_id, data.id_, dl_cb, nil)
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "_All_ *messages* _of_ "..user_name.." *[ "..data.id_.." ]* _has been_ *deleted*", 0, "md")
       elseif lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*حميع رسائل المستخدم* "..user_name.." *[ "..data.id_.." ]* *تم حذفها*", 0, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "*رسائل العضو* *[ "..data.sender_user_id_.." ]* *تم حذفها 🗑*", 0, "md")
        end
     end
   end
 else
     if lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_لم يتم العثور على المستخدم_", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_لم يتم العثور على العضو_", 0, "md")
    else
   return tdcli.sendMessage(arg.chat_id, "", 0, "*User Not Found*", 0, "md")
       end
@@ -489,20 +489,20 @@ local lang = redis:get(hash)
 local data = load_data(_config.moderation.data)
 chat = msg.chat_id_
 user = msg.sender_user_id_
- if matches[1] == "اطرد" and is_mod(msg) then
+ if matches[1] == "دي" and is_mod(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="اطرد"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="دي"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if is_mod1(msg.chat_id_, matches[2]) then
    if not lang then
      tdcli.sendMessage(msg.chat_id_, "", 0, "_You can't kick mods,owners or bot admins_", 0, "md")
    elseif lang then
-     tdcli.sendMessage(msg.chat_id_, "", 0, "*لا يمكنك طرد المشرفين والادمنية*", 0, "md")
+     tdcli.sendMessage(msg.chat_id_, "", 0, "*📌 لا تستطيع طرد المدراء اوالادمنيه*", 0, "md")
          end
      else
 kick_user(matches[2], msg.chat_id_)
@@ -512,30 +512,30 @@ kick_user(matches[2], msg.chat_id_)
     tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="اطرد"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="دي"})
          end
       end
- if matches[1] == "امسح الكل" and is_mod(msg) then
+ if matches[1] == "مسح الكل" and is_mod(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="امسح الكل"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="مسح الكل"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if is_mod1(msg.chat_id_, matches[2]) then
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "_You can't delete messages mods,owners or bot admins_", 0, "md")
      elseif lang then
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*لا يمكنك حذف جميع الرسائل للمشرفين والادمنية*", 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حذف رسائل المدراء او الادمنيه*", 0, "md")
    end
      else
 tdcli.deleteMessagesFromUser(msg.chat_id_, matches[2], dl_cb, nil)
     if not lang then
   return tdcli.sendMessage(msg.chat_id_, "", 0, "_All_ *messages* _of_ *[ "..matches[2].." ]* _has been_ *deleted*", 0, "md")
    elseif lang then
-  return tdcli.sendMessage(msg.chat_id_, "", 0, "*جميع رسائل المستخدم* *[ "..matches[2].." ]* *تم حذفها*", 0, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "*رسائل العضو* *[ "..data.sender_user_id_.." ]* *تم حذفها 🗑*", 0, "md")
          end
       end
    end
@@ -543,7 +543,7 @@ tdcli.deleteMessagesFromUser(msg.chat_id_, matches[2], dl_cb, nil)
     tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="امسح الكل"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="مسح الكل"})
          end
       end
  if matches[1] == "حظر عام" and is_admin(msg) then
@@ -559,14 +559,14 @@ end
    if not lang then
     return tdcli.sendMessage(msg.chat_id_, "", 0, "_You can't globally ban other admins_", 0, "md")
 else
-    return tdcli.sendMessage(msg.chat_id_, "", 0, "*لا يمكنك حظر المشرفين والادمنية*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
         end
      end
    if is_gbanned(matches[2]) then
    if not lang then
   return tdcli.sendMessage(msg.chat_id_, "", 0, "*User "..matches[2].." is already globally banned*", 0, "md")
     else
-  return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." محظور من مجموعات البوت *", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره عام ☑️*", 0, "md")
         end
      end
   data['gban_users'][tostring(matches[2])] = ""
@@ -575,7 +575,7 @@ kick_user(matches[2], msg.chat_id_)
    if not lang then
  return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*User "..matches[2].." has been globally banned*", 0, "md")
     else
- return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." تم حظره من مجموعات البوت*", 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره عام ☑️*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
@@ -585,20 +585,20 @@ kick_user(matches[2], msg.chat_id_)
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="حظر عام"})
       end
    end
- if matches[1] == "فتح عام" and is_admin(msg) then
+ if matches[1] == "الغاء العام" and is_admin(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="فتح عام"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="الغاء العام"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if not is_gbanned(matches[2]) then
      if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "*User "..matches[2].." is not globally banned*", 0, "md")
     else
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." بالفعل غير محظور من مجموعات البوت*", 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره العام ☑️*", 0, "md")
         end
      end
   data['gban_users'][tostring(matches[2])] = nil
@@ -606,14 +606,14 @@ end
    if not lang then
 return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*User "..matches[2].." has been globally unbanned*", 0, "md")
    else
-return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." تم الغاء حظره من مجموعات البوت*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره العام ☑️*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
     tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="فتح عام"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="الغاء العام"})
       end
    end
  if matches[1] == "حظر" and is_mod(msg) then
@@ -629,14 +629,14 @@ end
      if not lang then
     return tdcli.sendMessage(msg.chat_id_, "", 0, "_You can't ban mods,owners or bot admins_", 0, "md")
     else
-    return tdcli.sendMessage(msg.chat_id_, "", 0, "*لا يمكنك حظر المشرفين والادمنية*", 0, "md")
+    return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
         end
      end
    if is_banned(matches[2], msg.chat_id_) then
    if not lang then
   return tdcli.sendMessage(msg.chat_id_, "", 0, "_User "..matches[2].." is already banned_", 0, "md")
   else
-  return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." بالفعل فد تم حظره*", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد حظره ☑️*", 0, "md")
         end
      end
 data[tostring(chat)]['banned'][tostring(matches[2])] = ""
@@ -645,7 +645,7 @@ kick_user(matches[2], msg.chat_id_)
    if not lang then
  return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "_User "..matches[2].." has been banned_", 0, "md")
   else
- return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." تم حظره*", 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم حظره ☑️*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
@@ -668,7 +668,7 @@ end
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "_User "..matches[2].." is not banned_", 0, "md")
   else
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." غير محظور*", 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم بالتأكيد الغاء حظره ☑️*", 0, "md")
         end
      end
 data[tostring(chat)]['banned'][tostring(matches[2])] = nil
@@ -676,7 +676,7 @@ data[tostring(chat)]['banned'][tostring(matches[2])] = nil
    if not lang then
 return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "_User "..matches[2].." has been unbanned_", 0, "md")
    else
-return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." قد تم حظره*", 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* * تم الغاء حظره ☑️*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
@@ -686,27 +686,27 @@ return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="الغاء الحظر"})
       end
    end
- if matches[1] == "اكتم" and is_mod(msg) then
+ if matches[1] == "كتم" and is_mod(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="اكتم"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="كتم"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if is_mod1(msg.chat_id_, matches[2]) then
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "_You can't silent mods,leaders or bot admins_", 0, "md")
  else
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*لا يمكنك اسكات المشرفين والادمنية*", 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, "*📌 لا تستطيع حظر المدراء او الادمنيه*", 0, "md")
         end
      end
    if is_silent_user(matches[2], chat) then
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "_User "..matches[2].." is already silent_", 0, "md")
    else
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." تم اسكاته بالفعل*", 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد كتمه 🔕*", 0, "md")
         end
      end
 data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = ""
@@ -714,30 +714,30 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = ""
     if not lang then
  return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "_User "..matches[2].." added to silent users list_", 0, "md")
   else
- return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." تمت اضافته الى لائحة الاسكات*", 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم كتمه 🔕*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
     tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="اكتم"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="كتم"})
       end
    end
- if matches[1] == "فتح الكتم" and is_mod(msg) then
+ if matches[1] == "الغاء الكتم" and is_mod(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
       chat_id_ = msg.chat_id_,
       message_id_ = msg.reply_to_message_id_
-    }, action_by_reply, {chat_id=msg.chat_id_,cmd="فتح الكتم"})
+    }, action_by_reply, {chat_id=msg.chat_id_,cmd="الغاء الكتم"})
 end
   if matches[2] and string.match(matches[2], '^%d+$') then
    if not is_silent_user(matches[2], chat) then
      if not lang then
      return tdcli.sendMessage(msg.chat_id_, "", 0, "_User "..matches[2].." is not silent_", 0, "md")
    else
-     return tdcli.sendMessage(msg.chat_id_, "", 0, "*المستخدم "..matches[2].." غير مسكت بالفعل*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم بالتأكيد الغاء الكتم عنه 🔕*", 0, "md")
         end
      end
 data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
@@ -745,23 +745,23 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
    if not lang then
  return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "_User "..matches[2].." removed from silent users list_", 0, "md")
   else
- return tdcli.sendMessage(msg.chat_id_, msg.id_, 0, "*المستخدم "..matches[2].." تمت ازالته من قائمة الاسكات*", 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, "_العضو_ "..user_name.." *"..data.id_.."* *تم الغاء الكتم عنه 🔕*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
    tdcli_function ({
       ID = "SearchPublicChat",
       username_ = matches[2]
-    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="فتح الكتم"})
+    }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="الغاء الكتم"})
       end
    end
-		if matches[1]:lower() == 'امسح' and is_owner(msg) then
-			if matches[2] == 'bans' then
+		if matches[1]:lower() == 'مسح' and is_owner(msg) then
+			if matches[2] == 'قائمه الحظر' then
 				if next(data[tostring(chat)]['banned']) == nil then
      if not lang then
 					return "_No_ *banned* _users in this group_"
    else
-					return "*لا يوجد مستخدمين محظورين في هذه المجموعة*"
+					return "*لا يوجد مستخدمين محظورين في هذه المجموعه*"
               end
 				end
 				for k,v in pairs(data[tostring(chat)]['banned']) do
@@ -771,15 +771,15 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
      if not lang then
 				return "_All_ *banned* _users has been unbanned_"
     else
-				return "*تم الغاء الحظر عن جميع المستخدمين في هذه المجموعة*"
+				return "*تم الغاء الحظر عن جميع المستخدمين في هذه المجموعه*"
            end
 			end
-			if matches[2] == 'قائمة الاسكات' then
+			if matches[2] == 'قائمه الكتم' then
 				if next(data[tostring(chat)]['is_silent_users']) == nil then
         if not lang then
 					return "_No_ *silent* _users in this group_"
    else
-					return "*لا يوجد مستخدمين مسكتين في هذه المجموعة*"
+					return "*لا يوجد مستخدمين مكتومين في هذه المجموعه*"
              end
 				end
 				for k,v in pairs(data[tostring(chat)]['is_silent_users']) do
@@ -789,17 +789,17 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
        if not lang then
 				return "*Silent list* _has been cleaned_"
    else
-				return "*تم مسح قائمة الاسكات*"
+				return "*تم مسح قائمه الكتم*"
                end
 			    end
         end
-		if matches[1]:lower() == 'امسح' and is_sudo(msg) then
-			if matches[2] == 'gbans' then
+		if matches[1]:lower() == 'مسح' and is_sudo(msg) then
+			if matches[2] == 'قائمه العام' then
 				if next(data['gban_users']) == nil then
     if not lang then
 					return "_No_ *globally banned* _users available_"
    else
-					return "*لا يوجد مستخدمين محظورين من مجموعات البوت*"
+					return "*لا يوجد مستخدمين محظورين عام في المجموعه *"
              end
 				end
 				for k,v in pairs(data['gban_users']) do
@@ -809,17 +809,17 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
       if not lang then
 				return "_All_ *globally banned* _users has been unbanned_"
    else
-				return "*تم الغاء الحظر عن جميع المستخدمين المحظورين من مجموعات البوت*"
+				return "*تم الغاء الحظر عن جميع المستخدمين المحظورين عام من المجموعه*"
           end
 			end
      end
-if matches[1] == "قائمة الحظر ع" and is_admin(msg) then
+if matches[1] == "قائمه العام" and is_admin(msg) then
   return gbanned_list(msg)
  end
-if matches[1] == "قائمة الاسكات" and is_mod(msg) then
+if matches[1] == "قائمه الكتم" and is_mod(msg) then
   return silent_users_list(chat)
  end
-if matches[1] == "قائمة الحظر" and is_mod(msg) then
+if matches[1] == "قائمه الحظر" and is_mod(msg) then
   return banned_list(chat)
  end
 end
@@ -827,24 +827,24 @@ return {
 	patterns = {
 "^(حظر عام)$",
 "^(حظر عام) (.*)$",
-"^(فتح عام)$",
-"^(فتح عام) (.*)$",
-"^(قائمة الحظر ع)$",
+"^(الغاء العام)$",
+"^(الغاء العام) (.*)$",
+"^(قائمه العام)$",
 "^(حظر)$",
 "^(حظر) (.*)$",
 "^(الغاء الحظر)$",
 "^(الغاء الحظر) (.*)$",
-"^(قائمة الحظر)$",
-"^(اكتم)$",
-"^(اكتم) (.*)$",
-"^(فتح الكتم)$",
-"^(فتح الكتم) (.*)$",
-"^(قائمة الاسكات)$",
-"^(اطرد)$",
-"^(اطرد) (.*)$",
-"^(امسح الكل)$",
-"^(امسح الكل) (.*)$",
-"^(امسح) (.*)$",
+"^(قائمه الحظر)$",
+"^(كتم)$",
+"^(كتم) (.*)$",
+"^(الغاء الكتم)$",
+"^(الغاء الكتم) (.*)$",
+"^(قائمه الكتم)$",
+"^(دي)$",
+"^(دي) (.*)$",
+"^(مسح الكل)$",
+"^(مسح الكل) (.*)$",
+"^(مسح) (.*)$",
 
 },
 run = run,
