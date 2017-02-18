@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/x7_bot
+cd $HOME/TEAMBOSS
 
 install() {
 	    cd tg
@@ -67,8 +67,8 @@ fi
 #  --permanent-peer-ids                 use permanent peer ids
 #			#			#			#			#			#			#			#			#			#
 #Example To launch with second profile :
-# ./x7_bot.sh -p second-profile
+# ./TEAMBOSS.sh -p second-profile
 
 #			  OR
 
-# ./x7_bot.sh --profile second-profile
+# ./TEAMBOSS.sh --profile second-profile
