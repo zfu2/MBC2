@@ -33,7 +33,7 @@ local function run(msg, matches)
 				else
 					rank = 'مجرد عضو 😹'
 				end
-				local text = '<b>اهـلا بـك ❤️ معلوماتك :</b>\n\n<b>الاسم الاول💡 :</b> <i>'..data.first_name_..'</i>\n\n<b>الاسم الثاني💡 :</b> <i>'..lastName..'</i>\n\n<b>المعرف💡:</b> '..username..'\n\n<b>الايدي💡 :</b> [ <code>'..data.id_..'</code> ]\n\n<b> ايدي الكروب💡 :</b> [ <code>'..arg.chat_id..'</code> ]\n\n<b>رقم هاتفك💡 :</b> [ <code>'..telNum..'</code> ]\n\n<b>موقعك💡 :</b> <i>'..rank..'</i>\n\n<i>💡 مـطـور الـسـورس : @TH3BOSS</i>'
+				local text = '<b>اهـلا بـك ❤️ معلوماتك :</b>\n\n<b>الاسم الاول💡 :</b> <i>'..data.first_name_..'</i>\n\n<b>الاسم الثاني💡 :</b> <i>'..lastName..'</i>\n\n<b>المعرف💡:</b> '..username..'\n\n<b>الايدي💡 :</b> [ <code>'..data.id_..'</code> ]\n\n<b> ايدي الكروب💡 :</b> [ <code>'..arg.chat_id..'</code> ]\n\n<b>موقعك💡 :</b> <i>'..rank..'</i>\n\n<i>💡 مـطـور الـسـورس : @TH3BOSS</i>'
 				tdcli.sendMessage(arg.chat_id, msg.id_, 1, text, 1, 'html')
 			end
 		end
