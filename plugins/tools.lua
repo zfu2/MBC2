@@ -559,7 +559,7 @@ end
 if matches[1] == 'bc' and is_admin(msg) then		
 tdcli.sendMessage(matches[2], 0, 0, matches[3], 0)	end	
 
-if matches[1] == 'نشر' and is_sudo(msg) then		
+if matches[1] == 'اذاعه' and is_sudo(msg) then		
 local data = load_data(_config.moderation.data)		
 local bc = matches[2]			
 for k,v in pairs(data) do				
@@ -623,7 +623,9 @@ patterns = {
 "^(مسح معرف البوت) (.*)$",
 "^(الماركدوان) (.*)$",
 "^(bc) (%d+) (.*)$",
-"^(نشر) (.*)$",
+"^(تفعيل) (.*)$",
+"^(تعطيل) (.*)$",
+"^(اذاعه) (.*)$",
 }, 
 run = th3boss 
 }
