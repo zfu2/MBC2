@@ -310,7 +310,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦ is no longer a group owner ☑️*', 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الاداره ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الاداره ☑️_', 0, "md")
 end
 end
 tdcli_function ({
@@ -338,7 +338,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦ *has been demoted ☑️*', 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الادمنيه ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الادمنيه ☑️_', 0, "md")
    end
 end
 tdcli_function ({
@@ -428,7 +428,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦ *is no longer a group owner* ☑️', 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الاداره ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الاداره ☑️_', 0, "md")
    end
 end
    if cmd == "demote" then
@@ -444,7 +444,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦*has been demoted* ☑️', 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الادمنيه ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الادمنيه ☑️_', 0, "md")
    end
 end
    if cmd == "id" then
@@ -536,7 +536,7 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦ *is no longer a group owner* ☑️', 0, "md")
     else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الاداره ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الاداره ☑️_', 0, "md")
    end
 end
    if cmd == "demote" then
@@ -552,7 +552,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = nil
    if not lang then
 return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ *User* ['..user_name..'] *['..data.id_..']*\n💡¦*has been demoted* ☑️', 0, "md")
    else
-return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزبله من الادمنيه ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦_ الايدي_ *['..data.id_..']*\n💡¦ _تم تنزيله من الادمنيه ☑️_', 0, "md")
    end
 end
     if cmd == "whois" then
