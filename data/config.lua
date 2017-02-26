@@ -6,9 +6,11 @@ do local _ = {
     "groupmanager",
     "msg-checks",
     "plugins",
-    "tools"
+    "tools",
+    "me"
   },
-info_text = "💡Welcome To\n TEAMBOSS  \nFor More Information Subscribe To The Channel @llDEV1ll \nhttps://github.com/moody2020/TEAMBOSS\n\n💡Dev @TH3BOSS\n\n💡 Dev Bot @ll60Kllbot\n\n💡 channel @llDEV1ll\n",  moderation = {
+  info_text = "💡Welcome To TEAMBOSS  \nFor More Information Subscribe To The Channel @llDEV1ll \n\n https://github.com/moody2020/TEAMBOSS\n\n💡Dev : @TH3BOSS\n\n💡 Dev Bot : @ll60Kllbot\n\n💡 channel : @llDEV1ll\n",
+  moderation = {
     data = "./data/moderation.json"
   },
   sudo_users = {
