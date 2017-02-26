@@ -1,5 +1,5 @@
 -- Begin myinfo.lua
-local function run(msg, matches)
+local function th3boss(msg, matches)
 	if matches[1]:lower() == 'معلوماتي' then
 		function get_id(arg, data)
 			local username
@@ -33,7 +33,7 @@ local function run(msg, matches)
 				else
 					rank = 'مجرد عضو 😹'
 				end
-				local text = '<b>❤️ اهـلا بـك معلوماتك :</b>\n\n<b>💡 الاسم الاول :</b> <i>'..data.first_name_..'</i>\n\n<b>💡 الاسم الثاني :</b> <i>'..lastName..'</i>\n\n<b>💡 المعرف:</b> '..username..'\n\n<b>💡 الايدي :</b> [ <code>'..data.id_..'</code> ]\n\n<b> 💡 ايدي الكروب :</b> [ <code>'..arg.chat_id..'</code> ]\n\n<b>💡 موقعك :</b> <i>'..rank..'</i>\n\n<i>💡 مـطـور الـسـورس : @TH3BOSS</i>'
+				local text = '<b>❤️ اهـلا بـك معلوماتك :</b>\n\n<b>💡 الاسم الاول :</b> <i>'..data.first_name_..'</i>\n\n<b>💡 الاسم الثاني :</b> <i>'..lastName..'</i>\n\n<b>💡 المعرف:</b> '..username..'\n\n<b>💡 الايدي :</b> [ <code>'..data.id_..'</code> ]\n\n<b> 💡 ايدي الكروب :</b> [ <code>'..arg.chat_id..'</code> ]\n\n<b>💡 موقعك :</b> <i>'..rank..'</i>\n\n 💡 مـطـور الـسـورس : @TH3BOSS\n\n 💡 قـنـاه الـسـورس : @llDEV1ll'
 				tdcli.sendMessage(arg.chat_id, msg.id_, 1, text, 1, 'html')
 			end
 		end
@@ -43,5 +43,5 @@ end
 
 return { patterns = 
 	{ "^(معلوماتي)$" }, 
-	run = run
+	run = th3boss
 	}
