@@ -88,12 +88,7 @@ function create_config( )
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[💡Welcome To TEAMBOSS 
-For More Information Subscribe To The Channel @llDEV1ll 
-https://github.com/moody2020/TEAMBOSS
-💡Dev @TH3BOSS
-💡 Dev Bot @ll60Kllbot
-💡 channel @llDEV1ll
+    info_text = [[💡Welcome To TEAMBOSS  \nFor More Information Subscribe To The Channel @llDEV1ll \n\n https://github.com/moody2020/TEAMBOSS\n\n💡Dev : @TH3BOSS\n\n💡 Dev Bot : @ll60Kllbot\n\n💡 channel : @llDEV1ll\n
 ]],
   }
   serialize_to_file(config, './data/config.lua')
