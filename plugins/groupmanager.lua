@@ -2637,7 +2637,7 @@ if matches[2] == "pin" or matches[2] == "التثبيت" and is_owner(msg) then
 return unlock_pin(msg, data, target)
 end
 end
-if matches[1] == "قفل" or matches[1] == "open" and is_mod(msg) then
+if matches[1] == "قفل" or matches[1] == "lock" and is_mod(msg) then
 local target = msg.to.id
 if matches[2] == "all" or matches[2] == "الكل" then
 return mute_all(msg, data, target)
