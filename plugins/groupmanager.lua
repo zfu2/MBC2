@@ -2651,7 +2651,7 @@ end
 if matches[2] == "photo" or matches[2] == "الصور" then
 return mute_photo(msg ,data, target)
 end
-if matches[2] == "video" or matches[2] == "فيديو" then
+if matches[2] == "video" or matches[2] == "الفيديو" then
 return mute_video(msg ,data, target)
 end
 if matches[2] == "audio" or matches[2] == "البصمات" then
@@ -3218,7 +3218,7 @@ patterns ={
 "^(الغاء منع) (.*)$",
 "^(قائمه المتع)$",
 "^()$",
-"^(help)$",
+"^()$",
 "^(الرابط)$",
 "^(ضع رابط)$",
 "^(تغيير جديد)$",
