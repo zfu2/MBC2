@@ -518,23 +518,23 @@ local lang = redis:get(hash)
     local i = 1
   if not data[tostring(msg.chat_id_)] then
   if not lang then
-    return '_Group is not added_'
+    return '_📌¦ Group is not added_'
 else
-    return '*المجموعه ليست مضافه*'
+    return '*📌¦ المجموعه ليست مضافه*'
    end
   end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['banned']) == nil then --fix way
      if not lang then
-					return "_No_ *banned* _users in this group_"
+					return "📌¦_ No_ *banned* _users in this group_"
    else
-					return "*💡 لايوجد أعضاء محطورين في هذه المجموعه*"
+					return "*📌¦ لايوجد أعضاء محطورين في هذه المجموعه*"
               end
 				end
        if not lang then
-   message = '*List of banned users :*\n'
+   message = '*📌¦ List of banned users :*\n'
          else
-   message = '_💡 قائمه الاعضاء المحظورين :_\n'
+   message = '_📌¦ قائمه الاعضاء المحظورين :_\n'
      end
   for k,v in pairs(data[tostring(chat_id)]['banned']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -550,23 +550,23 @@ local lang = redis:get(hash)
     local i = 1
   if not data[tostring(msg.chat_id_)] then
   if not lang then
-    return '_Group is not added_'
+    return '_📌¦ Group is not added_'
 else
-    return '*المجموعه ليست مضافه*'
+    return '*📌¦ المجموعه ليست مضافه*'
    end
   end
   -- determine if table is empty
   if next(data[tostring(chat_id)]['is_silent_users']) == nil then --fix way
         if not lang then
-					return "_No_ *silent* _users in this group_"
+					return "📌¦ _No_ *silent* _users in this group_"
    else
-					return "*💡 لايوجد لأعضاء مكتومين في هذه المجموعه*"
+					return "*📌¦ لايوجد لأعضاء مكتومين في هذه المجموعه*"
              end
 				end
       if not lang then
-   message = '*List of silent users :*\n'
+   message = '*📌¦ List of silent users :*\n'
        else
-   message = '_💡 قائمه الاعضاء المكتومين :_\n'
+   message = '_📌¦ قائمه الاعضاء المكتومين :_\n'
     end
   for k,v in pairs(data[tostring(chat_id)]['is_silent_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -586,15 +586,15 @@ local lang = redis:get(hash)
   end
   if next(data['gban_users']) == nil then --fix way
     if not lang then
-					return "_No_ *globally banned* _users available_"
+					return "📌¦ _No_ *globally banned* _users available_"
    else
-					return "*💡 لايوجد اعضاء محظورين عام*"
+					return "*📌¦ لايوجد اعضاء محظورين عام*"
              end
 				end
         if not lang then
-   message = '*List of globally banned users :*\n'
+   message = '*📌¦ List of globally banned users :*\n'
    else
-   message = '_💡 قائمه المحظورين عام :_\n'
+   message = '_📌¦ قائمه المحظورين عام :_\n'
    end
   for k,v in pairs(data['gban_users']) do
     message = message ..i.. '- '..v..' [' ..k.. '] \n'
@@ -613,17 +613,17 @@ local lang = redis:get(hash)
     end
   if not data[tostring(msg.chat_id_)] then
   if not lang then
-    return '_Group is not added_'
+    return '_📌¦ Group is not added_'
 else
-    return '*المجموعة ليست مضافة*'
+    return '*📌¦ المجموعة ليست مضافة*'
    end
   end
   -- determine if table is empty
   if next(data[tostring(msg.chat_id_)]['filterlist']) == nil then --fix way
       if not lang then
-    return "*Filtered words list* _is empty_"
+    return "*📌¦ Filtered words list* _is empty_"
       else
-    return "_💡 قائمه الكلمات الممنوعه فارغه_"
+    return "_📌¦ قائمه الكلمات الممنوعه فارغه_"
      end
   end
   if not data[tostring(msg.chat_id_)]['filterlist'] then
@@ -631,9 +631,9 @@ else
     save_data(_config.moderation.data, data)
     end
       if not lang then
-       filterlist = '*List of filtered words :*\n'
+       filterlist = '*📌¦ List of filtered words :*\n'
          else
-       filterlist = '_💡 قائمه الكلمات الممنوعه :_\n'
+       filterlist = '_📌¦ قائمه الكلمات الممنوعه :_\n'
     end
  local i = 1
    for k,v in pairs(data[tostring(msg.chat_id_)]['filterlist']) do
