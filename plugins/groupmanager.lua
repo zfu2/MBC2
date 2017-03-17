@@ -3033,9 +3033,200 @@ return "📌¦ _ تم تغيير اللغه الى : ar_☑️"
 end
 end
 
-if matches[1] == "" or matches[1] == "" and is_mod(msg) then
+if matches[1] == "help" or matches[1] == "الاوامر" and is_mod(msg) then
 if not lang then
-text = [[ ]]
+text = [[
+*setowner* `[username|id|reply]` 
+_Set Group Owner(Multi Owner)_
+
+*remowner* `[username|id|reply]` 
+ _Remove User From Owner List_
+ 
+*promote* `[username|id|reply]` 
+_Promote User To Group Admin_
+
+*demote* `[username|id|reply]` 
+_Demote User From Group Admins List_
+
+*setflood* `[1-50]`
+_Set Flooding Number_
+
+*silent* `[username|id|reply]` 
+_Silent User From Group_
+
+*unsilent* `[username|id|reply]` 
+_Unsilent User From Group_
+
+*kick* `[username|id|reply]` 
+_Kick User From Group_
+
+*ban* `[username|id|reply]` 
+_Ban User From Group_
+
+*unban* `[username|id|reply]` 
+_UnBan User From Group_
+
+*res* `[username]`
+_Show User ID_
+
+*id* `[reply]`
+_Show User ID_
+
+*whois* `[id]`
+_Show User's Username And Name_
+
+*lock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention|gifs | photo | document | sticker | video | text | forward | location | audio | voice | contact | all]`
+_If This Actions Lock, Bot Check Actions And Delete Them_
+
+*unlock* `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention|gifs | photo | document | sticker | video | text | forward | location | audio | voice | contact | all]`
+_If This Actions Unlock, Bot Not Delete Them_
+
+*set*`[rules | name | photo | link | about | welcome]`
+_Bot Set Them_
+
+*clean* `[bans | mods | bots | rules | about | silentlist | filtelist | welcome]`   
+_Bot Clean Them_
+
+*filter* `[word]`
+_Word filter_
+
+*unfilter* `[word]`
+_Word unfilter_
+
+*pin* `[reply]`
+_Pin Your Message_
+
+*unpin* 
+_Unpin Pinned Message_
+
+*settings*
+_Show Group Settings_
+
+*silentlist*
+_Show Silented Users List_
+
+*filterlist*
+_Show Filtered Words List_
+
+*banlist*
+_Show Banned Users List_
+
+*ownerlist*
+_Show Group Owners List_ 
+
+*modlist* 
+_Show Group Moderators List_
+
+*rules*
+_Show Group Rules_
+
+*about*
+_Show Group Description_
+
+*id*
+_Show Your And Chat ID_
+
+*gpinfo*
+_Show Group Information_
+
+*link*
+_Show Group Link_
+
+*setwelcome [text]*
+_set Welcome Message_
+
+_This Help List Only For_ *Moderators/Owners!*
+_Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
+*Good luck ;)*
+
+🔹➖➖🔹➖➖🔹➖➖🔹
+‎📌¦ مطور الـسـورس : @TH3BOSS
+‎📌¦ قناه الـسـورس : @llDEV1ll
+
+]]
+
+elseif lang then
+
+text = [[
+ 📌¦ اوامر سورس الزعيم  باللغه العربيه
+ 
+ 🔹➖➖🔹➖➖🔹➖➖🔹
+
+📌¦ تفعيل | تعطيل - لتفعيل البوت او تعطيل
+
+📌¦ ضع لغه عربي | انكلش 
+
+📌¦ رفع مطور - لرفع مطور
+ 
+📌¦ تنزيل مطور - لتنزيل مطور
+
+📌¦ رفع المدير - لرفع مدير
+ 
+📌¦ تنزيل المدير - لتنزيل مدير
+
+📌¦ رفع اداري - لرفع اداري
+ 
+📌¦ تنزيل اداري - لتنزيل اداري
+
+📌¦ رفع ادمن - لرفع ادمن
+ 
+📌¦ تنزيل ادمن - لتنزيل ادمن
+
+📌¦ قائمه المدراء | قائمه الادمنيه
+
+📌¦ حظر عام | الغاء العام - لحظر العام او الالغاء
+
+📌¦ حظر | دي | الغاء الحظر 
+
+📌¦ كتم | الغاء الكتم | مسح الكل - كتم العضو او مسح كل رسائله
+
+📌¦ قائمه الكتم | قائمه الحظر - لعرض القوائم
+
+📌¦ تثبيت - لتثبيت الرسائل
+
+📌¦ الغاء تثبيت - لالغاء تثبيت الرسائل
+
+📌¦ ايدي | موقعي  - لعرض موقعك او الايدي
+
+📌¦ قائمه المنع | الاعدادات | الوسائط - لرويه ملحقات الحماية والاعدادات
+
+🔹➖➖🔹➖➖🔹➖➖🔹
+
+ 📌¦ -  قفل ~ للقفل و فتح ~ للفتح 
+ 
+
+📌¦ التوجيه | الكتحركه | الدردشه | البصمات 
+
+📌¦ الجهات | الملصقات | الصوت | الفيديو | الصور
+
+🔹➖➖🔹➖➖🔹➖➖🔹
+
+ 📌¦  قفل ~ للقفل و فتح ~ للفتح 
+ 
+ 
+📌¦ الروابط | التثبيت | التاك | التذكير | التعديل 
+
+📌¦ الكلايش | التكرار | البوتات | الماركدوان | الانلاين | الكيبورد
+
+🔹➖➖🔹➖➖🔹➖➖🔹
+
+📌¦ مسح - قائمه الحظر | المدراء | الادمنيه | قائمه المنع | قائمه الكتم
+
+📌¦ الغاء منع - لحذف الكلمات الممنوعه
+
+📌¦ منع - لمنع الكلمات داخل المجموعه
+
+📌¦ قائمه المنع - لاضهار الكلمات الممنوعه
+
+📌¦ التكرار + العدد - لاضافه عدد التكرار
+
+📌¦ الرابط | ضع رابط | تغير الرابط 
+
+🔹➖➖🔹➖➖🔹➖➖🔹
+‎📌¦ مطور الـسـورس : @TH3BOSS
+‎📌¦ قناه الـسـورس : @llDEV1ll
+
+]]
 end
 return text
 end
@@ -3217,8 +3408,8 @@ patterns ={
 "^(منع) (.*)$",
 "^(الغاء منع) (.*)$",
 "^(قائمه المتع)$",
-"^()$",
-"^()$",
+"^(help)$",
+"^(الاوامر)$",
 "^(الرابط)$",
 "^(ضع رابط)$",
 "^(تغيير جديد)$",
