@@ -232,7 +232,7 @@ if is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..'] \n📌¦ _ID_ *['..data.id_..']*\n📌¦_has been globally banned ☑️_', 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, '💡¦ _العضو_ ['..user_name..'] \n💡¦ _الايدي_ *['..data.id_..']*\n💡¦_ تم حظره عام  ☑️_', 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦ _الايدي_ *['..data.id_..']*\n📌¦_ تم حظره عام  ☑️_', 0, "md")
    end
 end
 tdcli_function ({
@@ -636,7 +636,7 @@ end
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..'] \n📌¦ _ID_ *['..data.id_..']*\n📌¦_is globally banned ☑️_', 0, "md")
   else
-  return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦ _الايدي_ *['..data.id_..']*\n💡¦_ تم بالتأكيد حظره ☑️_', 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦ _الايدي_ *['..data.id_..']*\n📌¦_ تم بالتأكيد حظره ☑️_', 0, "md")
         end
      end
 data[tostring(chat)]['banned'][tostring(matches[2])] = ""
@@ -745,7 +745,7 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
    if not lang then
  return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..'] \n📌¦ _ID_ *['..data.id_..']*\n📌¦_removed from silent users list ☑️_', 0, "md")
   else
- return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦ _الايدي_ *['..data.id_..']*\n💡¦_ تم الغاء كتمه ☑️_', 0, "md")
+ return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦ _الايدي_ *['..data.id_..']*\n📌¦_ تم الغاء كتمه ☑️_', 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
