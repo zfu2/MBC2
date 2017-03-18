@@ -23,6 +23,43 @@ install() {
   chmod +x tg
 }
 
+function print_logo() {
+ echo -e "\033[38;5;600m"
+ echo -e "        ____ _____ _   _ _____ ____   ___  ____ ____  
+                 / __ \_   _| | | |___ /| __ ) / _ \/ ___/ ___| 
+                / / _  || | | |_| | |_ \|  _ \| | | \___ \___ \ 
+               | | (_| || | |  _  |___) | |_) | |_| |___) |__) |
+                \ \__,_||_| |_| |_|____/|____/ \___/|____/____/ 
+                 \____/"
+ echo -e "        "
+ echo -e "        "
+ echo -e "    "
+ echo -e "\n\e[36m"
+}
+
+function logo_play() {
+    declare -A txtlogo
+    seconds="0.010"
+    txtlogo[1]="   ____ _____ _   _ _____ ____   ___  ____ ____  
+                 / __ \_   _| | | |___ /| __ ) / _ \/ ___/ ___| 
+                / / _  || | | |_| | |_ \|  _ \| | | \___ \___ \ 
+               | | (_| || | |  _  |___) | |_) | |_| |___) |__) |
+                \ \__,_||_| |_| |_|____/|____/ \___/|____/____/ 
+                 \____/"
+    txtlogo[2]=""
+    txtlogo[3]=""
+    txtlogo[4]=""
+    printf "\033[38;5;600m\t"
+    for i in ${!txtlogo[@]}; do
+        for x in seq 0 ${#txtlogo[$i]}; do
+            printf "${txtlogo[$i]:$x:1}"
+            sleep $seconds
+        done
+        printf "\n\t"
+    done
+    printf "\n"
+}
+
 if [ "$1" = "install" ]; then
   install
   else
@@ -31,18 +68,20 @@ if [ ! -f ./tg/tgcli ]; then
     echo "tg not found"
     echo "Run $0 install"
     exit 1
-fi
+ fi
 
-if [ "$1" = "-p" ]; then
-    echo -e "\033[38;5;208m"
-    echo -e "     >> TEAMBOSS Source :BY @TH3BOSS "
-    echo -e "                                              \033[0;00m"
-    echo -e "\e[36m"
-    ./tg/tgcli -s ./bot/bot.lua -p $2
-fi
+
+   print_logo
    echo -e "\033[38;5;208m"
-   echo -e "     >> TH3BOSS Source :BY @TH3BOSS "
-   echo -e "                                              \033[0;00m"
+   echo -e "     »»                       We Are Not Attacker                             "
+   echo -e "     »»                       We Are Not Alliance                             "
+   echo -e "     »»                       We Are Family                                   "
+   echo -e "     »»                       We Are The Best 😻                             "
+   echo -e "     »»                       @llDEV1ll                                     "
+   echo -e "\033[0;00m"
    echo -e "\e[36m"
-   ./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
+   logo_play
+   #sudo service redis-server restart
+   #./tg/tgcli -s ./bot/bot.lua -l 1 -E $@
+   ./tg/tgcli -s ./bot/bot.lua $@
 fi
