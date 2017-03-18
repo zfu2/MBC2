@@ -403,7 +403,7 @@ if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
    return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..']\n📌¦ _ ID _*['..data.id_..']*\n📌¦ *is already a moderator* ☑️', 0, "md")
 else
-return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ العضو ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ انه بالتأكيد ادمن ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ انه بالتأكيد ادمن ☑️_', 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
@@ -411,7 +411,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..']\n📌¦ _ ID _*['..data.id_..']*\n📌¦ *has been promoted* ☑️', 0, "md")
    else
-   return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ العضو ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ تمت ترقيته ليصبح ادمن ☑️_', 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ تمت ترقيته ليصبح ادمن ☑️_', 0, "md")
    end
 end
    if cmd == "remowner" then
@@ -511,7 +511,7 @@ if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..']\n📌¦ _ ID _*['..data.id_..']*\n📌¦ *is already a moderator* ☑️', 0, "md")
 else
-return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ العضو ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ انه بالتأكيد ادمن ☑️_', 0, "md")
+return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ انه بالتأكيد ادمن ☑️_', 0, "md")
       end
    end
 administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
@@ -519,7 +519,7 @@ administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] = user_name
    if not lang then
     return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _User_ ['..user_name..']\n📌¦ _ ID _*['..data.id_..']*📌¦ *has been promoted* ☑️', 0, "md")
    else
-   return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ العضو ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ تمت ترقيته ليصبح ادمن ☑️_', 0, "md")
+   return tdcli.sendMessage(arg.chat_id, "", 0, '📌¦ _العضو_ ['..user_name..'] \n📌¦_ الايدي _*['..data.id_..']*\n📌¦_ تمت ترقيته ليصبح ادمن ☑️_', 0, "md")
    end
 end
    if cmd == "remowner" then
