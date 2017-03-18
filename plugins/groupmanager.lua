@@ -612,7 +612,7 @@ save_data(_config.moderation.data, data)
 if not lang then
  return "📌¦ *Link Posting Has Been Locked* ☑️"
 else
-return '📌¦ _مرحبا عزيزي_ \n💡¦ _تم قفل الروابط_ ☑️'
+return '📌¦ _مرحبا عزيزي_ \n📌¦ _تم قفل الروابط_ ☑️'
 end
 end
 end
@@ -1175,9 +1175,9 @@ local hash = "gp_lang:"..msg.to.id
 local lang = redis:get(hash)
 if not is_mod(msg) then
 if not lang then
- return "💡¦ *You're Not Moderator 🚶*"
+ return "📌¦ *You're Not Moderator 🚶*"
 else
-return "💡¦ _هذا الامر يخص الادمنيه فقط _ ��"
+return "📌¦ _هذا الامر يخص الادمنيه فقط _ "
 end
 end
 
@@ -2398,9 +2398,9 @@ local function getpro(arg, data)
      end
    else
        if not lang then
-      tdcli.sendMessage(msg.to.id, msg.id_, 1, "`You Have Not Profile Photo...!`\n\n> *Gp ID :* `"..msg.to.id.."`\n*User ID :* `"..msg.from.id.."`", 1, 'md')
+      tdcli.sendMessage(msg.to.id, msg.id_, 1, "📌¦ لا يوجد عندك صوره...!\n\n> *📌¦ ايـدي الـمـجـمـوعه :* "..msg.to.id.."`\n*📌¦ ايـديك : :* `"..msg.from.id.."`", 1, 'md')
        elseif lang then
-            tdcli.sendMessage(msg.to.id, msg.id_, 1, "`You Have Not Profile Photo...!`\n\n> *Gp ID :* `"..msg.to.id.."`\n*User ID :* `"..msg.from.id.."`", 1, 'md')
+            tdcli.sendMessage(msg.to.id, msg.id_, 1, "📌¦ You Have Not Profile Photo...!\n\n> *📌¦ Chat ID :* `"..msg.to.id.."`\n*📌¦ User ID :* `"..msg.from.id.."`", 1, 'md')
             end
         end
    end
@@ -2830,9 +2830,9 @@ return '📌¦ _مرحبآ عزيزي_\n📌¦ _تم حفظ القوانين ب�
   if matches[1] == "rules" or matches[1] == 'القوانين' then
  if not data[tostring(chat)]['rules'] then
    if not lang then
-     rules = "💡¦ *The Default Rules :*\n💡¦ *1⃣- No Flood.*\n💡¦ *2⃣- No Spam.*\n💡¦ *3⃣- No Advertising.* \n💡¦ *4⃣- Try to stay on topic.*\n💡¦ *5⃣- Forbidden any racist, sexual, homophobic or gore content.*\n➡️ *Repeated failure to comply with these rules will cause ban.*\n@llDEV1ll"
+     rules = "📌¦ *The Default Rules :*\n📌¦ *1⃣- No Flood.*\n📌 *2⃣- No Spam.*\n📌¦ *3⃣- No Advertising.* \n📌¦ *4⃣- Try to stay on topic.*\n📌¦ *5⃣- Forbidden any racist, sexual, homophobic or gore content.*\n➡️ *Repeated failure to comply with these rules will cause ban.*\n@llDEV1ll"
     elseif lang then
-     rules = "💡¦ _مرحبأ عزيري_ 👋🏻 _القوانين كلاتي_ 👇🏻\n💡¦ _ممنوع نشر الروابط_ ❌\n💡¦ _ممنوع التكلم او نشر صور اباحيه_ ❌\n💡¦ _ممنوع  اعاده توجيه_ ❌\n💡¦ _ممنوع التكلم بلطائفه_ ❌\n💡¦ _الرجاء احترام المدراء والادمنيه _😅\n💡¦ _تابع _@llDEV1ll 💤"
+     rules = "📌¦ _مرحبأ عزيري_ 👋🏻 _القوانين كلاتي_ 👇🏻\n📌¦ _ممنوع نشر الروابط_ ❌\n📌¦ _ممنوع التكلم او نشر صور اباحيه_ ❌\n📌¦ _ممنوع  اعاده توجيه_ ❌\n📌¦ _ممنوع التكلم بلطائفه_ ❌\n📌¦ _الرجاء احترام المدراء والادمنيه _😅\n📌¦ _تابع _@llDEV1ll 💤"
  end
         else
      rules = "*Group Rules :*\n"..data[tostring(chat)]['rules']
@@ -2966,7 +2966,7 @@ return "📌¦ _اوبس ☢ هنالك خطأ_ 🚸\n📌¦ _عذرا لا يو
             if not lang then
 				return "📌¦ *All [owners] has been demoted* ☑️"
            else
-            return "📌¦ _مرحبآ عزيزي \n💡¦ _تم حذف المدراء بنجاح_ ☑️"
+            return "📌¦ _مرحبآ عزيزي \n📌¦ _تم حذف المدراء بنجاح_ ☑️"
           end
 			end
      end
@@ -3033,7 +3033,7 @@ return "📌¦ _ تم تغيير اللغه الى : ar_☑️"
 end
 end
 
-if matches[1] == "help" or matches[1] == "الاوامر" and is_mod(msg) then
+if matches[1] == "الاوامر" or matches[1] == "help" and is_notmod(msg) then
 if not lang then
 text = [[
 *setowner* `[username|id|reply]` 
