@@ -33,7 +33,7 @@ end
           lock_markdown = 'yes',
           flood = 'yes',
           lock_bots = 'yes',
-          lock_pin = 'no',
+          lock_pin = 'yes',
           welcome = 'yes',
           },
    mutes = {
@@ -173,13 +173,18 @@ return  "📌¦ _لا يوجد ادمن في هذه المجموعه ☑️"
   end
 end
 if not lang then
-   message = '📌¦ *List of moderators :*\n'
+   message = '📌¦*List of moderators :*\n'
 else
    message = '📌¦ *قائمه الادمنيه :*\n'
+end
+  for k,v in pairs(data[tostring(msg.chat_id_)]['mods'])
+do
+    message = message ..i.. '- '..v..' [' ..k.. '] \n'
    i = i + 1
 end
   return message
 end
+
 
 local function ownerlist(msg)
 local hash = "gp_lang:"..msg.to.id
