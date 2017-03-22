@@ -8,7 +8,7 @@ do local _ = {
     "plugins",
     "tools",
     "me",
-    "replay"
+    "addreplay"
   },
   info_text = "📌¦ Welcome To My Dear\n\nTH3BOSS V12 \nFor More Information Subscribe To The Channel @llDEV1ll \n https://github.com/moody2020/TH3BOSS\n\n📌¦ Dev @TH3BOSS\n\n📌¦ Dev Bot @ll60Kllbot\n\n📌¦ Channel @llDEV1ll ",
   moderation = {
