@@ -1,5 +1,6 @@
 @TH3BOSS 
   
+V 12 We Are Th3 Best
   
  كيفية تنصيب سورس الزعيم 
  
@@ -23,23 +24,23 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 ورأهأَ خلي  
 
-git clone https://github.com/moody2020/TEAMBOSS.git
+git clone https://github.com/moody2020/TH3BOSS.git
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 ورهأ خلي    
 
-cd TEAMBOSS
+cd TH3BOSS
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 ورهأَ خلي 
 ➖🔹➖🔹➖🔹➖🔹➖🔹
-chmod +x TEAMBOSS.sh
+chmod +x TH3BOSS.sh
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 ورهأَ خلي 
 
-./TEAMBOSS.sh install
+./TH3BOSS.sh install
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 ورهأَ خلي  
 
-./TEAMBOSS.sh 
+./TH3BOSS.sh 
 ➖🔹➖🔹➖🔹➖🔹➖🔹
 *ملاحظه اذا يطلعلك حرف او  
 يوكف بالتنصيب تطي امر y وانتر 
@@ -75,7 +76,7 @@ redis-server
 وفتح ترمنال ثاني وخلي  
 ```sh
 
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/moody2020/TH3BOSS.git && cd TH3BOSS && chmod +x TH3BOSS.sh && ./TH3BOSS.sh install && ./TH3BOSS.sh
 ```
 
 ➖🔹➖🔹➖🔹➖🔹➖🔹
