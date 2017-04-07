@@ -76,8 +76,8 @@ if [ ! -f ./tg/tgcli ]; then
    echo -e "     »»                       We Are Not Attacker                             "
    echo -e "     »»                       We Are Not Alliance                             "
    echo -e "     »»                       We Are Family                                   "
-   echo -e "     »»                       We Are The Best                             "
-   echo -e "     »»                       @llDEV1ll                                     "
+   echo -e "     »»                       We Are Th3Best                             "
+   echo -e "     »»                       @TH3BOSS                                     "
    echo -e "\033[0;00m"
    echo -e "\e[36m"
    logo_play
