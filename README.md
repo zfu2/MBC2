@@ -42,7 +42,6 @@ Y خلي
 
 ./MBC2.sh
 ======================
-
 يطلب رقم خلي رقم البوت  
 
 اي شي تحتاج تعال هنا
@@ -73,7 +72,6 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```
 
 ======================
-
 
 يطلب رقم خلي رقم البوت 
 
