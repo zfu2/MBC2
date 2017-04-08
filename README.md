@@ -47,8 +47,7 @@ Y خلي
 اي شي تحتاج تعال هنا
 https://telegram.me/Cr7rC
 ```
- One command
-To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
+
 
 لتنصيب البوـب بكوَدَ واحد فقط َ   
 
