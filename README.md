@@ -46,9 +46,6 @@ Y خلي
 
 اي شي تحتاج تعال هنا
 https://telegram.me/Cr7rC
-
- Enter a phone number & confirmation code.
-Congratulations, you better bot
 ```
  One command
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
