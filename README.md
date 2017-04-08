@@ -65,7 +65,7 @@ redis-server
 وفتح ترمنال ثاني وخلي  
 ```sh
 
-sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/zfu2/MBC2.git && cd MBC2 && chmod +x NBC2.sh && ./MBC2.sh install && ./MBC2.sh
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson* libpython-dev make unzip git redis-server g++ -y --force-yes && git clone https://github.com/zfu2/MBC2.git && cd MBC2 && chmod +x MBC2.sh && ./MBC2.sh install && ./MBC2.sh
 ```
 
 ======================
